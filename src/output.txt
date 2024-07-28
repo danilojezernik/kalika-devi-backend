@@ -16,34 +16,6 @@ export interface Blog {
 /* tslint:disable */ 
 /* eslint-disable */ 
 
-export interface Experiences {
- '_id'?: string;
-  title: string;
-  stack: string;
-  framework: string;
-  programming_language: string;
-  company: string;
-  employee: boolean;
-  tasks: string;
-  company_start: string;
-  company_end: string;
-  datum_vnosa: string;
-}
-
-/* tslint:disable */ 
-/* eslint-disable */ 
-
-export interface Comment {
- '_id'?: string;
-  blog_id: string;
-  content: string;
-  author: string;
-  datum_vnosa: string;
-}
-
-/* tslint:disable */ 
-/* eslint-disable */ 
-
 export interface Contact {
  '_id'?: string;
   name: string;
@@ -56,34 +28,10 @@ export interface Contact {
 /* tslint:disable */ 
 /* eslint-disable */ 
 
-export interface Links {
- '_id'?: string;
-  title: string;
-  link: string;
-  datum_vnosa: string;
-}
-
-/* tslint:disable */ 
-/* eslint-disable */ 
-
 export interface Newsletter {
  '_id'?: string;
   title: string;
   content: string;
-  datum_vnosa: string;
-}
-
-/* tslint:disable */ 
-/* eslint-disable */ 
-
-export interface Projects {
- '_id'?: string;
-  title: string;
-  subtitle: string;
-  category: string;
-  content: string;
-  github: string;
-  website: string;
   datum_vnosa: string;
 }
 
@@ -125,19 +73,6 @@ export interface Book {
   naslov: string;
   podnaslov: string;
   tehnologija: string;
-  vsebina: string;
-  image: string;
-  datum_vnosa: string;
-}
-
-/* tslint:disable */ 
-/* eslint-disable */ 
-
-export interface Technology {
- '_id'?: string;
-  technology: string;
-  title: string;
-  subtitle: string;
   vsebina: string;
   image: string;
   datum_vnosa: string;
