@@ -10,9 +10,8 @@ from src.domain.book import Book
 from src.domain.contact import Contact
 from src.domain.newsletter import Newsletter
 from src.domain.subscriber import Subscriber
-from src.domain.user import User
 # Imported routes
-from src.routes import index, blog, login, user, contact, newsletter, \
+from src.routes import index, blog, login, contact, newsletter, \
     subscriber, book
 from src.services import db
 from src.tags_metadata import tags_metadata
@@ -33,7 +32,6 @@ app.include_router(index.router, prefix='/index', tags=['Index'])
 app.include_router(blog.router, prefix='/blog', tags=['Blog'])
 app.include_router(book.router, prefix='/book', tags=['Book'])
 
-app.include_router(user.router, prefix='/user', tags=['User'])
 app.include_router(login.router, prefix='/login', tags=['Login'])
 
 app.include_router(contact.router, prefix='/contact', tags=['Contact'])
@@ -51,13 +49,6 @@ if __name__ == '__main__':
     else:
         print('Database drop and seed skipped')
 
-    # Confirm if you want to drop and seed users database
-    drop_user = input('If you want to drop user type "y": ').strip().lower()
-    if drop_user == 'y':
-        db.drop_user()
-        db.seed_user()
-    else:
-        print('User drop and seed skipped')
 
     # Confirm if you want to write fields to output.txt
     yes_doc = input('Type "y" if you want to write the document and press enter: ').strip().lower()

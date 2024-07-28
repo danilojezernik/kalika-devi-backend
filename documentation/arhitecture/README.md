@@ -22,34 +22,21 @@ Contains the main application files for different modules.
 - `database`: Database connection and ORM setup.
 - `blog.py`: Blog-related functionalities.
 - `book.py`: Book-related functionalities.
-- `comments.py`: Comment management.
 - `contact.py`: Contact form and related operations.
 - `experiences.py`: User experiences handling.
-- `links.py`: Managing links.
 - `newsletter.py`: Newsletter management.
-- `projects.py`: Project management.
 - `subscriber.py`: Subscriber management.
-- `technology.py`: Technology-related functionalities.
-- `user.py`: User management and authentication.
 
 ### domain
 
 Contains the domain models and logic.
 
 - `blog.py`: Domain logic for blogs.
-- `book.py`: Domain logic for books.
-- `comments.py`: Domain logic for comments.
 - `contact.py`: Domain logic for contact information.
-- `experiences.py`: Domain logic for experiences.
-- `links.py`: Domain logic for links.
 - `newsletter.py`: Domain logic for newsletters.
-- `projects.py`: Domain logic for projects.
-- `sleep.py`: Domain logic for sleep tracking.
 - `subscriber.py`: Domain logic for subscribers.
-- `technology.py`: Domain logic for technology.
 - `token.py`: Token management for authentication.
 - `token_data.py`: Token data models.
-- `user.py`: Domain logic for users.
 - `user_in_db.py`: User data models for the database.
 
 ### routes
@@ -59,20 +46,12 @@ Contains the routing logic for the web application.
 - `admin.py`: Admin-related routes.
 - `blog.py`: Routes for blog functionalities.
 - `book.py`: Routes for book functionalities.
-- `comments.py`: Routes for comments.
 - `contact.py`: Routes for contact form.
 - `email.py`: Email-related routes.
-- `experiences.py`: Routes for experiences.
-- `github.py`: Routes for GitHub integration.
 - `index.py`: Main index routes.
-- `links.py`: Routes for links.
 - `login.py`: Routes for user login.
 - `newsletter.py`: Routes for newsletters.
-- `projects.py`: Routes for projects.
-- `register.py`: Routes for user registration.
 - `subscriber.py`: Routes for subscribers.
-- `technology.py`: Routes for technology-related functionalities.
-- `user.py`: Routes for user management.
 
 ### services
 

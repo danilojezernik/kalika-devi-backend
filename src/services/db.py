@@ -7,7 +7,6 @@ from src.database.book import book
 from src.database.contact import contact
 from src.database.newsletter import newsletter
 from src.database.subscriber import subscriber
-from src.database.user import user
 
 client = MongoClient(env.DB_MAIN)
 process = client[env.DB_PROCESS]
@@ -21,12 +20,6 @@ def drop():
     process.book.drop()
     pass
 
-
-def drop_user():
-    process.user.drop()
-    pass
-
-
 def seed():
     process.blog.insert_many(blog)
     process.contact.insert_many(contact)
@@ -35,7 +28,3 @@ def seed():
     process.book.insert_many(book)
     pass
 
-
-def seed_user():
-    process.user.insert_many(user)
-    pass
