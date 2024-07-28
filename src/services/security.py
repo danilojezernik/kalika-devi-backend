@@ -7,7 +7,6 @@ from fastapi.security import OAuth2PasswordBearer
 from typing import Annotated
 from fastapi import Depends, HTTPException, status
 
-from src.domain.user import User
 from src import env
 from src.domain.user_in_db import UserInDB
 from src.domain.token_data import TokenData
@@ -173,28 +172,3 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
 # Has a password
 def make_hash(password):
     return pwd_context.hash(password)
-
-
-# Register new user function
-def register_user(user: User):
-    """
-    This function registers a new user by creating a User instance with hashed password.
-
-    Parameters:
-    - user_data (User): Registration data containing username and password.
-
-    Returns:
-    - User: The registered user with hashed password.
-    """
-    hashed_password = make_hash(user.hashed_password)
-    user_data = User(
-        username=user.username,
-        email=user.email,
-        full_name=user.full_name,
-        hashed_password=hashed_password,
-    )
-
-    # Save user to database
-    db.process.user.insert_one(user_data.dict(by_alias=True))
-
-    return user_data
