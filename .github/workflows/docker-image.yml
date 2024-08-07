@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: portfolio-api
+  IMAGE_NAME: kalika-api
   IMAGE_TAG: latest
 
 jobs:
